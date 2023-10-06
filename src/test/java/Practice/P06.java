@@ -1,4 +1,4 @@
-package Prictice;
+package Practice;
 
 import org.junit.Assert;
 import org.junit.Test;
