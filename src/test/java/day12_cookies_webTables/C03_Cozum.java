@@ -60,7 +60,19 @@ public class C03_Cozum extends TestBase {
 
         }
         // 9. Tabloda “First Name” i Kierra olan kisinin Salary’sini yazdirin
+        String ilkKisim="(//div[@class=\"rt-tr-group\"])[";
+        String ikinciKisim="]//*[@class=\"rt-td\"][1]";
+        String ucuncuKisim="]//*[@class=\"rt-td\"][5]";
+        String expectedIsim="Kierra";
 
+        for (int i = 1; i <=7 ; i++) {
+            String dinamikIsim=driver.findElement(By.xpath(ilkKisim+i+ikinciKisim)).getText();
+            String dinamikMaas=ilkKisim+i+ucuncuKisim;
+            if (dinamikIsim.equals(expectedIsim)){
+                System.out.println(expectedIsim+" nın maası:"+driver.findElement(By.xpath(dinamikMaas)).getText());
+            }
+
+        }
 
         //10. Page sayfasinda bir method olusturun, Test sayfasindan satir ve sutun sayisini girdigimde bana datayi yazdirsin
     }
