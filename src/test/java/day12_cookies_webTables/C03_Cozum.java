@@ -75,5 +75,14 @@ public class C03_Cozum extends TestBase {
         }
 
         //10. Page sayfasinda bir method olusturun, Test sayfasindan satir ve sutun sayisini girdigimde bana datayi yazdirsin
+        //((//*[@class="rt-tr-group"])[1]//*[@class="rt-td"])[1]
+        dataYazdir(2,2);
+        dataYazdir(1,4);
+
+    }
+    public void dataYazdir(int satir,int sutun){
+    String dinamikXpath="((//*[@class=\"rt-tr-group\"])["+satir+"]//*[@class=\"rt-td\"])["+sutun+"]";
+      String dataMetin=  driver.findElement(By.xpath(dinamikXpath)).getText();
+        System.out.println("Tablodaki "+satir+". satir "+sutun+". sutun datası : "+dataMetin);
     }
 }

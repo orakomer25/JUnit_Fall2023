@@ -36,9 +36,10 @@ public class C01_sagClick extends TestBase {
            }
 
        }
+       bekle(10);
        //7- Acilan sayfada h1 taginda “Make sure your code lands” yazdigini test edelim
        driver.switchTo().window(ikinciSayfaWHD);
-
+        bekle(10);
        String expectedYazi="Make sure your code lands";
        String actualYazi=driver.findElement(By.tagName("h1")).getText();
        Assert.assertEquals(expectedYazi,actualYazi);
